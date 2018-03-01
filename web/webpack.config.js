@@ -1,6 +1,10 @@
 /* eslint-disable */
+const fs = require('fs')
 const path = require('path')
 const webpack = require('webpack')
+const babelConfig = JSON.parse(
+  fs.readFileSync(path.join(__dirname, '../.babelrc'))
+)
 
 module.exports = {
   entry: ['babel-polyfill', path.join(__dirname, '../index.web.js')],
@@ -48,7 +52,11 @@ module.exports = {
         ],
         exclude: /node_modules\/react-native-web\//,
         loader: 'babel-loader',
-        query: { cacheDirectory: true }
+        options: {
+          ...babelConfig,
+          plugins: ['react-native-web', ...babelConfig.plugins],
+          cacheDirectory: true
+        }
       },
       {
         test: /\.(gif|jpe?g|png|svg)$/,

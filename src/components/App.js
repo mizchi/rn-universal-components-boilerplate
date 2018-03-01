@@ -1,6 +1,7 @@
 /* @flow */
 import React from 'react'
 import styled from 'styled-components/primitives'
+import { Grid, Row } from 'react-native-easy-grid'
 
 const SceneView = styled.View`
   flex: 1;
@@ -15,6 +16,10 @@ const TitleText = styled.Text`
 
 export default () => (
   <SceneView>
-    <TitleText>Hello</TitleText>
+    <Grid>
+      <Row>
+        <TitleText>Hello2</TitleText>
+      </Row>
+    </Grid>
   </SceneView>
 )
