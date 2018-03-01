@@ -2,7 +2,8 @@
   "main": "node_modules/expo/AppEntry.js",
   "private": true,
   "scripts": {
-    "build:web": "webpack --config web/webpack.config.js"
+    "build:web": "webpack --mode development --config web/webpack.config.js",
+    "build:web:prod": "webpack --mode production --config web/webpack.config.js"
   },
   "prettier": {
     "semi": false,
@@ -36,6 +37,7 @@
     "flow-bin": "^0.66.0",
     "glow": "^1.2.2",
     "prettier": "^1.10.2",
-    "webpack": "3"
+    "webpack": "4",
+    "webpack-cli": "^2.0.9"
   }
 }

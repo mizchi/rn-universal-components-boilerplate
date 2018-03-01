@@ -6,6 +6,8 @@ const babelConfig = JSON.parse(
   fs.readFileSync(path.join(__dirname, '../.babelrc'))
 )
 
+const DEV_PORT = 6000
+
 module.exports = {
   entry: ['babel-polyfill', path.join(__dirname, '../index.web.js')],
   output: {
