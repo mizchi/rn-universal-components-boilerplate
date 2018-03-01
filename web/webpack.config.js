@@ -1,5 +1,4 @@
 /* eslint-disable */
-// $ yarn add webpack babel-loader
 const path = require('path')
 const webpack = require('webpack')
 
@@ -26,7 +25,6 @@ module.exports = {
         __dirname,
         '../node_modules/react-native-web/dist/modules/ReactNativePropRegistry'
       ),
-      'styled-components': 'styled-components/primitives',
       'react-native': 'react-native-web'
     },
     extensions: ['.web.js', '.js', '.json']

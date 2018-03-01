@@ -6,7 +6,6 @@ Truly universal react application dev stack.
 
 * expo
 * react-native-web
-* firebase
 * styled-components
 * react-native-easy-grid
 * flow
