@@ -17,7 +17,8 @@ const TitleText = styled.Text`
 export default () => (
   <SceneView>
     <Grid>
-      <Row>
+      <Row height={32} />
+      <Row size={1}>
         <TitleText>Hello2</TitleText>
       </Row>
     </Grid>
